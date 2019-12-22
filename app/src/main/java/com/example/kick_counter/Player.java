@@ -1,20 +1,15 @@
 package com.example.kick_counter;
 
 public class Player {
-    private int  playOne;
+    private int  playerOne;
     private int playerTwo;
-    private int Score;
+    private int setScore = 0;
 
-    public void setScore (int Score){
-        this.Score = Score;
+    public void setPlayerOne (int setScore ){
+        this.playerOne = setScore;
     }
-    public void setPlayOne (int playOne){
-        this.playOne = playOne;
+    public void playerTwo (int setScore){
+        this.playerTwo = setScore;
     }
-
-    public void setplayerTwo(int playerTwo){
-        this.playerTwo = playerTwo;
-    }
-
 
 }

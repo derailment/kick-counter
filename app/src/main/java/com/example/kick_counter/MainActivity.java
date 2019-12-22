@@ -29,10 +29,10 @@ public class MainActivity extends AppCompatActivity {
         // 按下head按鈕 觸發事件
         headButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View arg0) {
-                playOne.addScore(3);
+                playerOne.addScore(3);
                 // 取得ID為score的元件
                 TextView result = (TextView) findViewById(R.id.score);
-                result.setText(playOne.getScore() + "");
+                result.setText(playerOne.getScore() + "");
             }
         });
 
@@ -41,10 +41,10 @@ public class MainActivity extends AppCompatActivity {
         // 按下head按鈕 觸發事件
         bodyButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View arg0) {
-                playOne.addScore(2);
+                playerOne.addScore(2);
                 // 取得ID為score的元件
                 TextView result = (TextView) findViewById(R.id.score);
-                result.setText(playOne.getScore() + "");
+                result.setText(playerOne.getScore() + "");
             }
         });
         // 取得ID為head的元件
@@ -52,10 +52,10 @@ public class MainActivity extends AppCompatActivity {
         // 按下head按鈕 觸發事件
         spinButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View arg0) {
-                playOne.addScore(4);
+                playerOne.addScore(4);
                 // 取得ID為score的元件
                 TextView result = (TextView) findViewById(R.id.score);
-                result.setText(playOne.getScore() + "");
+                result.setText(playerOne.getScore() + "");
             }
         });
 
@@ -63,9 +63,9 @@ public class MainActivity extends AppCompatActivity {
         spinheadButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View arge0) {
 
-                playOne.addScore(5);
+                playerOne.addScore(5);
                 TextView result = (TextView) findViewById(R.id.score);
-                result.setText(playOne.getScore() + "");
+                result.setText(playerOne.getScore() + "");
             }
         });
 
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
                 playerTwo.addScore(3);
                 TextView result = (TextView) findViewById(R.id.score_2);
-                result.setText(playTwo.getScore() + "");
+                result.setText(playerTwo.getScore() + "");
             }
         });
 
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View arge0){
                 playerTwo.addScore(2);
                 TextView result =(TextView)findViewById(R.id.score_2);
-                result.setText(playTwo.getScore()+"");
+                result.setText(playerTwo.getScore()+"");
             }
         });
         Button spin2Button=(Button)(TextView)findViewById(R.id.spin2);
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
             public  void onClick(View arge0){
                 playerTwo.addScore(4);
                 TextView result=(TextView)findViewById(R.id.score_2);
-                result.setText(playTwo.getScore()+"");
+                result.setText(playerTwo.getScore()+"");
             }
         });
         Button spinhead2Button=(Button)(TextView)findViewById(R.id.spinhead2);
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View arge0){
                 playerTwo.addScore(5);
                 TextView result=(TextView)findViewById(R.id.score_2);
-                result.setText(playTwo.getScore()+"");
+                result.setText(playerTwo.getScore()+"");
             }
         });
 
