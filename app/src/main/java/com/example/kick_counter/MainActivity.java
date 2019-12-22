@@ -12,17 +12,16 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int score_a;
-    private int score_b;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Player playerOne = new Player();
+        playerOne.setScore(0);
 
-        score_a = 0;
-        score_b = 0;
+        Player playerTwo = new Player();
+        playerTwo.setScore(0);
 
 
         // 取得ID為head的元件
@@ -30,10 +29,10 @@ public class MainActivity extends AppCompatActivity {
         // 按下head按鈕 觸發事件
         headButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View arg0) {
-                score_a += 3;
+                playOne.addScore(3);
                 // 取得ID為score的元件
                 TextView result = (TextView) findViewById(R.id.score);
-                result.setText(score_a + "");
+                result.setText(playOne.getScore() + "");
             }
         });
 
@@ -42,10 +41,10 @@ public class MainActivity extends AppCompatActivity {
         // 按下head按鈕 觸發事件
         bodyButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View arg0) {
-                score_a += 2;
+                playOne.addScore(2);
                 // 取得ID為score的元件
                 TextView result = (TextView) findViewById(R.id.score);
-                result.setText(score_a + "");
+                result.setText(playOne.getScore() + "");
             }
         });
         // 取得ID為head的元件
@@ -53,10 +52,10 @@ public class MainActivity extends AppCompatActivity {
         // 按下head按鈕 觸發事件
         spinButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View arg0) {
-                score_a += 4;
+                playOne.addScore(4);
                 // 取得ID為score的元件
                 TextView result = (TextView) findViewById(R.id.score);
-                result.setText(score_a + "");
+                result.setText(playOne.getScore() + "");
             }
         });
 
@@ -64,9 +63,9 @@ public class MainActivity extends AppCompatActivity {
         spinheadButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View arge0) {
 
-                score_a += 5;
+                playOne.addScore(5);
                 TextView result = (TextView) findViewById(R.id.score);
-                result.setText(score_a + "");
+                result.setText(playOne.getScore() + "");
             }
         });
 
@@ -74,34 +73,34 @@ public class MainActivity extends AppCompatActivity {
         head2Button.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View arge0) {
 
-                score_b += 3;
+                playerTwo.addScore(3);
                 TextView result = (TextView) findViewById(R.id.score_2);
-                result.setText(score_b + "");
+                result.setText(playTwo.getScore() + "");
             }
         });
 
         Button body2Button =(Button) (TextView) findViewById(R.id.body2);
         body2Button.setOnClickListener( new Button.OnClickListener(){
             public void onClick(View arge0){
-                score_b += 2;
+                playerTwo.addScore(2);
                 TextView result =(TextView)findViewById(R.id.score_2);
-                result.setText(score_b+"");
+                result.setText(playTwo.getScore()+"");
             }
         });
         Button spin2Button=(Button)(TextView)findViewById(R.id.spin2);
         spin2Button.setOnClickListener(new Button.OnClickListener(){
             public  void onClick(View arge0){
-                score_b+=4;
+                playerTwo.addScore(4);
                 TextView result=(TextView)findViewById(R.id.score_2);
-                result.setText(score_b+"");
+                result.setText(playTwo.getScore()+"");
             }
         });
         Button spinhead2Button=(Button)(TextView)findViewById(R.id.spinhead2);
         spinhead2Button.setOnClickListener(new Button.OnClickListener(){
             public void onClick(View arge0){
-                score_b+=5;
+                playerTwo.addScore(5);
                 TextView result=(TextView)findViewById(R.id.score_2);
-                result.setText(score_b+"");
+                result.setText(playTwo.getScore()+"");
             }
         });
 
