@@ -1,5 +1,16 @@
 package com.example.kick_counter;
 
 public class Player {
+    private int  playOne;
+    private int playerTwo;
+
+
+    public void setPlayOne (int playOne){
+        this.playOne = playOne;
+    }
+
+    public void setplayerTwo(int playerTwo){
+        this.playerTwo = playerTwo;
+    }
 
 }
