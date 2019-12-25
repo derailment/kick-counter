@@ -11,16 +11,17 @@ import android.widget.TextView;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
-
+    private Player playerOne;
+    private Player playerTwo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Player playerOne = new Player();
-        playerOne.setScore(0);
+        playerOne = new Player();
+        playerTwo = new Player();
 
-        Player playerTwo = new Player();
+        playerOne.setScore(0);
         playerTwo.setScore(0);
 
 
