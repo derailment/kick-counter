@@ -10,6 +10,6 @@ public class Player {
         return this.score;
     }
     public void addScore (int ad) {
-        this.score = ad ;
+        this.score+= ad ;
     }
 }
