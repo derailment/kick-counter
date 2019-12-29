@@ -104,6 +104,21 @@ public class MainActivity extends AppCompatActivity {
                 result.setText(playerTwo.getScore()+"");
             }
         });
+        Button RT =(Button)findViewById(R.id.RT);
+        RT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playerOne.setScore(0);
+                playerTwo.setScore(0);
+                TextView result=(TextView)findViewById(R.id.score);
+                TextView result2= (TextView)findViewById(R.id.score_2);
+                result.setText(playerOne.getScore()+"");
+                result2.setText(playerTwo.getScore()+"");
+
+
+            }
+        });
+
 
 
 

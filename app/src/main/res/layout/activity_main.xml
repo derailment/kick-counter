@@ -7,96 +7,152 @@
     tools:context=".MainActivity">
 
 
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="選手一號"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.147" />
     <LinearLayout
+        android:gravity="top"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="left"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
-
+        android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/score"
-            android:layout_width="196dp"
-            android:layout_height="42dp"
-            android:text="選手一號" />
-
-        <TextView
-            android:id="@+id/score_2"
-            android:layout_width="192dp"
-            android:layout_height="29dp"
-            android:layout_marginLeft="200dp"
-            android:text="選手二號" />
-
-        <Button
-            android:id="@+id/head"
-            android:layout_width="208dp"
-            android:layout_height="62dp"
-            android:outlineAmbientShadowColor="@android:color/background_light"
-            android:text="上端" />
-
-        <Button
-            android:id="@+id/body"
-            android:layout_width="204dp"
-            android:layout_height="75dp"
-            android:text="中端" />
-
-        <Button
-            android:id="@+id/spin"
-            android:layout_width="208dp"
-            android:layout_height="wrap_content"
-            android:text="轉身中端" />
-
-        <Button
-            android:id="@+id/spinhead"
-            android:layout_width="204dp"
-            android:layout_height="wrap_content"
-            android:text="轉身上端" />
-
-
-        <Button
-            android:id="@+id/head2"
-            android:layout_width="200dp"
-            android:layout_height="38dp"
-            android:layout_marginLeft="200dp"
-            android:text="上端" />
-
-        <Button
-            android:id="@+id/body2"
-            android:layout_width="202dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="200dp"
-            android:text="中端" />
-
-        <Button
-            android:id="@+id/spin2"
-            android:layout_width="200dp"
-            android:layout_height="35dp"
-            android:layout_marginLeft="200dp"
-            android:text="轉身中端" />
-
-        <Button
-            android:id="@+id/spinhead2"
-            android:layout_width="204dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="200dp"
-            android:text="轉身上端" />
-
-        <EditText
-            android:id="@+id/edittext"
-            android:layout_width="111dp"
-            android:layout_height="wrap_content" />
-        <Button
-            android:id="@+id/ed_button"
+            android:layout_marginLeft="85dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text='輸入選手姓名'
-
-            />
-
-
-
+            android:text="cooper兒童體能"
+            android:textSize="30dp" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/score_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="選手二號"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.793"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.147" />
+
+    <Button
+        android:id="@+id/head"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:outlineAmbientShadowColor="@android:color/background_light"
+        android:text="上端"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.245" />
+
+    <Button
+        android:id="@+id/body"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:text="中端"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.364" />
+
+    <Button
+        android:id="@+id/spin"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:text="轉身中端"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.467" />
+
+    <Button
+        android:id="@+id/spinhead"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:text="轉身上端"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.581" />
+
+    <Button
+        android:id="@+id/head2"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:text="上端"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.241" />
+
+    <Button
+        android:id="@+id/body2"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:text="中端"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.869"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.351" />
+
+    <Button
+        android:id="@+id/spin2"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:text="轉身中端"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.467" />
+
+    <Button
+        android:id="@+id/spinhead2"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:text="轉身上端"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.581" />
+
+    <Button
+        android:id="@+id/RT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="重製"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.733" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
