@@ -12,7 +12,7 @@ public class Player {
         this.score = s;
     }
 
-    public int getScore (){  //為什麼這裡的括號不用方東西
+    public int getScore (){
         return this.score;
     }
     public void addScore (int ad) {
