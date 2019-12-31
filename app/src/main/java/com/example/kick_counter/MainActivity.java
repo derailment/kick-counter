@@ -121,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 playerOne.setScore(0);
                 playerTwo.setScore(0);
+		counter.clear();
                 TextView result=(TextView)findViewById(R.id.score);
                 TextView result2= (TextView)findViewById(R.id.score_2);
                 result.setText(playerOne.getScore()+"");
