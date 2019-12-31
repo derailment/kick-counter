@@ -19,8 +19,9 @@ public class CounterStack {
             return lastHit;
         }
     }
-    public clear() {
-        for (int i = 0; i < this.hits.size(); i++) {
+    public void clear() {
+        int numHit = this.hits.size();
+        for (int i = 0; i < numHit; i++) {
             this.hits.remove(0);
         }	
     }
