@@ -2,8 +2,9 @@ package com.example.kick_counter;
 
 public class Player {
     private int score;
-    public Player() {
-
+    private String name;
+    public Player(String n) {
+        this.name = n;
     }
     public void setScore (int s ){
         this.score = s;
@@ -14,8 +15,10 @@ public class Player {
     public void addScore (int ad) {
         this.score+= ad ;
     }
-
     public void delScore (int s) {
         this.score-= s ;
+    }
+    public String getName() {
+        return this.name;
     }
 }

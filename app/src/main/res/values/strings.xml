@@ -1,4 +1,14 @@
 <resources>
+
+    <!--Config Activity-->
+    <string-array name="timer_entries">
+        <item>90</item>
+        <item>60</item>
+        <item>45</item>
+        <item>30</item>
+    </string-array>
+
+    <!--Main Activity-->
     <string name="app_name">kick-counter</string>
     <string name="head">head</string>
     <string name="body">body</string>
@@ -7,4 +17,5 @@
     <string name="head2">head2</string>
     <string name="score">score is here</string>
     <string name="score_2">score is here2</string>
+
 </resources>

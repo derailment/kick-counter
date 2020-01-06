@@ -2,13 +2,15 @@ package com.example.kick_counter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.media.Image;
 import android.os.Bundle;
 
+import android.os.CountDownTimer;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.view.View;
+
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
     private Player playerOne;
@@ -20,8 +22,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        playerOne = new Player();
-        playerTwo = new Player();
+        Bundle bundle = this.getIntent().getExtras();
+
+        String playerOneName = bundle.getString("playerOneName");
+        String playerTwoName = bundle.getString("playerTwoName");
+        final int countDownSec = bundle.getInt("countDownSec");
+
+        playerOne = new Player(playerOneName.equals("") ? "選手一號" : playerOneName);
+        playerTwo = new Player(playerTwoName.equals("") ? "選手二號" : playerTwoName);
+        TextView name_1 = (TextView) findViewById(R.id.name_1);
+        name_1.setText(playerOne.getName());
+        TextView name_2 = (TextView) findViewById(R.id.name_2);
+        name_2.setText(playerTwo.getName());
+
         playerOne.setScore(0);
         playerTwo.setScore(0);
 
@@ -150,6 +163,30 @@ public class MainActivity extends AppCompatActivity {
                 TextView result2= (TextView)findViewById(R.id.score_2);
                 result.setText(playerOne.getScore()+"");
                 result2.setText(playerTwo.getScore()+"");
+
+            }
+        });
+
+        Button timerButton =(Button)findViewById(R.id.timer_button);
+        timerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new CountDownTimer(countDownSec * 1000, 1000) {
+
+                    TextView countDownText = (TextView)findViewById(R.id.countdown);
+
+                    public void onTick(long millisUntilFinished) {
+
+                        NumberFormat f = new DecimalFormat("00");
+                        long min = (millisUntilFinished / 60000) % 60;
+                        long sec = (millisUntilFinished / 1000) % 60;
+
+                        countDownText.setText( f.format(min) + ":" + f.format(sec));
+                    }
+                    public void onFinish() {
+                        countDownText.setText("Time's Up !");
+                    }
+                }.start();
 
             }
         });
