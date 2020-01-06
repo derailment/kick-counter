@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import android.os.CountDownTimer;
 import android.widget.Button;
 import android.widget.TextView;
 import android.view.View;
@@ -16,6 +15,10 @@ public class MainActivity extends AppCompatActivity {
     private Player playerOne;
     private Player playerTwo;
     private CounterStack counter;
+    private boolean hasTimerStarted = false;
+    private SandClock timer;
+    private int countDownSec;
+    private TextView countDownText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -24,10 +27,12 @@ public class MainActivity extends AppCompatActivity {
 
         Bundle bundle = this.getIntent().getExtras();
 
+        countDownSec = bundle.getInt("countDownSec");
+        countDownText = (TextView)findViewById(R.id.countdown);
+        timer = new SandClock(countDownSec * 1000, 1000, countDownText);
+
         String playerOneName = bundle.getString("playerOneName");
         String playerTwoName = bundle.getString("playerTwoName");
-        final int countDownSec = bundle.getInt("countDownSec");
-
         playerOne = new Player(playerOneName.equals("") ? "選手一號" : playerOneName);
         playerTwo = new Player(playerTwoName.equals("") ? "選手二號" : playerTwoName);
         TextView name_1 = (TextView) findViewById(R.id.name_1);
@@ -132,9 +137,20 @@ public class MainActivity extends AppCompatActivity {
         RT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // 重置計時器
+                timer.pause();
+                timer = timer = new SandClock(countDownSec * 1000, 1000, countDownText);
+                hasTimerStarted = false;
+                NumberFormat f = new DecimalFormat("00");
+                long min = (countDownSec * 1000 / 60000) % 60;
+                long sec = (countDownSec * 1000 / 1000) % 60;
+                countDownText.setText( f.format(min) + ":" + f.format(sec));
+                Button timerButton =(Button)findViewById(R.id.timer_button);
+                timerButton.setText("倒數開始");
+
                 playerOne.setScore(0);
                 playerTwo.setScore(0);
-		counter.clear();
+		        counter.clear();
                 TextView result=(TextView)findViewById(R.id.score);
                 TextView result2= (TextView)findViewById(R.id.score_2);
                 result.setText(playerOne.getScore()+"");
@@ -167,28 +183,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button timerButton =(Button)findViewById(R.id.timer_button);
+        final Button timerButton =(Button)findViewById(R.id.timer_button);
         timerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new CountDownTimer(countDownSec * 1000, 1000) {
-
-                    TextView countDownText = (TextView)findViewById(R.id.countdown);
-
-                    public void onTick(long millisUntilFinished) {
-
-                        NumberFormat f = new DecimalFormat("00");
-                        long min = (millisUntilFinished / 60000) % 60;
-                        long sec = (millisUntilFinished / 1000) % 60;
-
-                        countDownText.setText( f.format(min) + ":" + f.format(sec));
-                    }
-                    public void onFinish() {
-                        countDownText.setText("Time's Up !");
-                    }
-                }.start();
-
+                if(!hasTimerStarted) {
+                    timer = timer.restart();
+                    hasTimerStarted = true;
+                    timerButton.setText("暫停");
+                } else {
+                    timer.pause();
+                    hasTimerStarted = false;
+                    timerButton.setText("恢復");
+                }
             }
         });
+    }
 
-    }}
+}
