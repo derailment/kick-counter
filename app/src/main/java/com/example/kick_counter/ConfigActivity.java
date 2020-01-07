@@ -1,7 +1,6 @@
 package com.example.kick_counter;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -13,6 +12,7 @@ public class ConfigActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_config);
 
@@ -21,14 +21,11 @@ public class ConfigActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                EditText playerOneName = (EditText)findViewById(R.id.player_one_edit);
 
-
-                EditText playerTwoName = (EditText)findViewById(R.id.player_two_edit);
-                playerTwoName.getText().toString();
+                EditText playerOneName = (EditText)findViewById(R.id.player_one_name);
+                EditText playerTwoName = (EditText)findViewById(R.id.player_two_name);
 
                 Spinner spinner = (Spinner) findViewById(R.id.timer_spinner);
-
 
                 // new一個intent物件，並指定Activity切換的class
                 Intent intent = new Intent();
@@ -50,4 +47,5 @@ public class ConfigActivity extends AppCompatActivity {
         });
 
     }
+
 }
