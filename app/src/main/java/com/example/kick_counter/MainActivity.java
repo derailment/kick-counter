@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
         // 取得選手名字，再創建選手，並寫到畫面的文字元素
         String playerOneName = bundle.getString("playerOneName");
         String playerTwoName = bundle.getString("playerTwoName");
-        playerOne = new Player(playerOneName.equals("") ? "選手一號" : playerOneName);
-        playerTwo = new Player(playerTwoName.equals("") ? "選手二號" : playerTwoName);
+        playerOne = new Player(playerOneName.trim().equals("") ? "Player 1" : playerOneName);
+        playerTwo = new Player(playerTwoName.trim().equals("") ? "Player 2" : playerTwoName);
         TextView playerOneText = (TextView) findViewById(R.id.player_one_name);
         playerOneText.setText(playerOne.getName());
         TextView playerTwoText = (TextView) findViewById(R.id.player_two_name);
