@@ -63,7 +63,7 @@
     </style>
 
     <style name="ButtonWhite">
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:textColor">@color/orange</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:gravity">center</item>
@@ -78,6 +78,30 @@
         <item name="android:gravity">center</item>
         <item name="android:paddingLeft">@dimen/space10</item>
         <item name="android:paddingRight">@dimen/space10</item>
+    </style>
+
+    <style name="ButtonCircleOrange">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:background">@drawable/btn_circle_orange</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/space10</item>
+        <item name="android:paddingRight">@dimen/space10</item>
+        <item name="android:layout_marginLeft">@dimen/space1</item>
+        <item name="android:layout_marginRight">@dimen/space1</item>
+    </style>
+
+    <style name="ButtonBigCircleOrange">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:background">@drawable/btn_big_circle_orange</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/space10</item>
+        <item name="android:paddingRight">@dimen/space10</item>
+        <item name="android:layout_marginLeft">@dimen/space5</item>
+        <item name="android:layout_marginRight">@dimen/space5</item>
     </style>
 
     <style name="EditText">
@@ -107,18 +131,28 @@
         <item name="android:paddingBottom">@dimen/space10</item>
     </style>
 
-    <style name="Spinner">
+    <style name="CenterTextView">
         <item name="android:minHeight">45dp</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">36sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textColorHint">@color/textGray</item>
         <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">center</item>
         <item name="android:paddingLeft">@dimen/space10</item>
         <item name="android:paddingRight">@dimen/space10</item>
         <item name="android:paddingTop">@dimen/space10</item>
         <item name="android:paddingBottom">@dimen/space10</item>
-        <item name="android:background">@android:color/darker_gray</item>
+    </style>
+
+    <style name="TextViewOrange">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:background">@drawable/btn_orange</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/space10</item>
+        <item name="android:paddingRight">@dimen/space10</item>
     </style>
 
     <style name="TextView14spBlackPad">
@@ -135,6 +169,20 @@
         <item name="android:textColor">@color/textGray</item>
         <item name="android:paddingTop">@dimen/space15</item>
         <item name="android:paddingBottom">@dimen/space15</item>
+    </style>
+
+    <style name="Spinner">
+        <item name="android:minHeight">45dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorHint">@color/textGray</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingLeft">@dimen/space10</item>
+        <item name="android:paddingRight">@dimen/space10</item>
+        <item name="android:paddingTop">@dimen/space10</item>
+        <item name="android:paddingBottom">@dimen/space10</item>
+        <item name="android:background">@android:color/white</item>
     </style>
 
     <style name="AppThemeFull.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

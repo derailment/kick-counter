@@ -39,8 +39,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="@dimen/space15"
-            android:layout_marginLeft="@dimen/m_left_right"
-            android:layout_marginRight="@dimen/m_left_right"
             android:weightSum="2">
             <TextView
                 android:layout_width="0dp"
