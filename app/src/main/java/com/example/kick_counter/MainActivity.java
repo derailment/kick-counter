@@ -207,7 +207,8 @@ public class MainActivity extends AppCompatActivity {
         long sec = (countDownSec * 1000 / 1000) % 60;
         this.countDownText.setText(f.format(min) + ":" + f.format(sec));
         Button countDownButton = (Button)findViewById(R.id.countdown_button);
-        countDownButton.setText("倒數開始");
+        countDownButton.setText("開始");
+
     }
 
 }
